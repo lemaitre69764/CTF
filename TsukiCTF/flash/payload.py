@@ -1,6 +1,5 @@
 import hmac, hashlib
 
-# Подставь из файла
 with open('./static/seed.txt', 'r') as f:
     SEED = bytes.fromhex(f.read().strip())
 
@@ -32,7 +31,6 @@ def generate_round_digits(seed: bytes, session_id: str, round_index: int):
 
     return digits
 
-# Генерация всех чисел
 total = 0
 print("\nЧисла по раундам:")
 for i in range(TOTAL_ROUNDS):
